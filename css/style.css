@@ -4,6 +4,7 @@
     --background-grey: #D9DBD5;
     --side-header:#EDEDED;
     --side-header-icon: #51585c;
+    --chat-icons:rgba(0,0,0,0.3);
 }
 
 * {
@@ -56,9 +57,9 @@ a {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   width: 1396px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0, .06),0 2px 5px 0 rgba(0,0,0,.2);
 }
 
 .side {
@@ -113,7 +114,7 @@ a {
 .search-bar {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 7px 10px;
   
 }
 
@@ -139,4 +140,105 @@ a {
   line-height: 20px;
   color: #a4a4a4;
   font-size: 14px;
+}
+
+.chats {
+  height: 550px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+}
+
+.archive {
+  display: flex;
+  align-items: center;
+  height: 49px;
+  padding: 0 14px;
+  cursor: pointer;
+  
+}
+
+.archive-left {
+  display: flex;
+  width: 49px;
+  height: 49px;
+  align-items: center;
+  justify-content: center;
+}
+
+.archive-right {
+  display: flex;
+  flex: 1;
+  justify-content: left;
+  align-items: center;
+  width: 286px;
+  height: 49px;
+}
+
+.archive-right > span {
+  padding: 0 15px 0 13px;
+  font-size: 17px;
+  color: #000;
+}
+
+
+.archive-end {
+  background-color: initial;
+}
+
+.archive-end > span {
+  color: #06d755;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.chats::-webkit-scrollbar {
+  width: 6px!important;
+  height: 6px!important;
+}
+
+.chats::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.2);
+}
+
+.chat {
+  display: flex;
+  align-items: center;
+  background: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat:hover {
+  background-color: #F5F5F5;
+}
+
+.chat:hover .chat-settings {
+  display: initial;
+}
+
+.chat-active {
+  background-color: #EBEBEB !important;
+}
+
+.chat-left > img {
+  height: 49px;
+  width: 49px;
+  position: relative;
+  background-color: #e6e6e6;
+  border-radius: 50%;
+}
+
+.chat-left {
+  padding: 0 15px 0 13px;
+}
+
+.chat-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1px;
+  padding-right: 20px;
 }
