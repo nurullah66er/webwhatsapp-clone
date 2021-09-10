@@ -1,0 +1,142 @@
+/* My Variables */
+:root {
+    --background-green: #009688;
+    --background-grey: #D9DBD5;
+    --side-header:#EDEDED;
+    --side-header-icon: #51585c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu,
+    Cantarell, "Fira Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(12) 1fr;
+  grid-template-rows: 127px 1fr;
+}
+
+.top {
+  background: var(--background-green);
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.bot {
+  background: var(--background-grey);
+  grid-column: 1 / -1;
+  grid-row: 2 / -1 ;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 1396px;
+  margin: 2rem auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.05);
+}
+
+.side {
+  background: white;
+  grid-column: 1 / 2 ;
+  border: 1px solid rgba(0,0,0,0.2);
+  
+}
+
+.side-header {
+  background:var(--side-header);
+  display: flex;
+  justify-content: space-between;
+  height: 59px;
+  padding: 10px 16px;
+}
+
+.side-header > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.side-head-icons {
+  display: flex;
+  flex: 1;
+  justify-content:flex-end; 
+  align-items: center;
+  cursor: pointer;
+  color: var(--side-header-icon);
+}
+
+.side-head-icons svg:active {
+  background-color: rgba(0,0,0,.1);
+  transition: background-color .1s ease;
+  border-radius: 50%;
+  box-shadow:  0 0 1px 8px rgba(0,0,0,.1);
+
+}
+
+.side-head-icons svg:nth-child(2) {
+  margin: 0 30px;
+}
+
+.side-search{
+  background: #F6F6F6;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.search-bar > svg {
+  position: absolute;
+  background: white;
+  color: var(--side-header-icon);
+  margin-left: 10px;
+}
+
+.search-bar > input {
+  border:none;
+  outline: none;
+  padding-right: 32px;
+  padding-left: 65px;
+  height: 35px;
+  width: 100%;
+  font-family: 'Segoe UI';
+  border-radius: 20px;  
+}
+
+.search-bar > input::placeholder {
+  line-height: 20px;
+  color: #a4a4a4;
+  font-size: 14px;
+}
