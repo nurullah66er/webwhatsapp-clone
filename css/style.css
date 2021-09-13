@@ -65,7 +65,7 @@ a {
 .side {
   background: white;
   grid-column: 1 / 2;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
 }
 
 .side-header {
@@ -261,6 +261,12 @@ a {
   font-weight: 400;
   color: #000;
 }
+.contact-name-unread {
+  font-size: 17px;
+  font-weight: 500;
+  color: #000;
+}
+
 
 .chat-message-typing,
 .chat-message-group,
@@ -334,4 +340,72 @@ a {
 .chat-message-image {
   padding-left: 2px;
   color: #51585c;
+}
+
+.main{
+ grid-column: 2 / -1;
+ position: relative;
+ background: url('../images/background.png') fixed;
+ background-size: 520px;
+}
+
+.main-chat-sidebar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--side-header);
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 10px 16px;
+  height: 59px;
+  cursor: pointer;
+}
+
+.main-chat-sidebar-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.main-chat-sidebar-left > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  
+}
+
+.contact-name-status {
+  padding: 0 0 0 15px;
+}
+
+.main-chat-contact-name {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000;
+}
+
+.main-chat-status {
+    min-height: 20px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #5F5F5F;
+}
+
+.main-chat-sidebar-right{
+  display: flex;
+  color: #51585c;
+  cursor: pointer;
+}
+
+.main-chat-sidebar-right svg:active {
+  background-color: rgba(0,0,0,.1);
+  border-radius: 50%;
+  box-shadow: 0 0 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-chat-sidebar-right > div {
+  padding: 8px;
 }
